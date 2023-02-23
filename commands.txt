@@ -1,0 +1,14 @@
+## Start Django project
+    ~$ django-admin startproject {project_name}
+
+## Start Django app
+    ~$ django-admin startapp {app_name}
+
+## Start server (on Linux)
+    ~$ python3 manage.py runserver
+
+## Make migrations
+    ~$ python3 manage.py makemigrations
+
+## Apply migrations
+    ~$ python3 manage.py migrate
