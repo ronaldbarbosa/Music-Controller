@@ -17,7 +17,7 @@ export default class CreateRoomPage extends Component {
         super(props)
         this.state = {
             guestCanPause: true,
-            votesToSkip: this.defaultVotes
+            votesToSkip: this.defaultVotes,
         }
 
         this.handleRoomBottomPressed = this.handleRoomBottomPressed.bind(this)
@@ -48,7 +48,7 @@ export default class CreateRoomPage extends Component {
         }
         fetch('/api/create-room', requestOptions)
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => this.props.history.push('/room/' + data));
     }
 
     render() {
